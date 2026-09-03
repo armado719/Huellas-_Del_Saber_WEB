@@ -2,17 +2,19 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
 const SLIDES = [
-  { id: 1, img: "/img/filosofia1.jpg", alt: "Niños jugando con cocina de juguete" },
-  { id: 2, img: "/img/filosofia2.jpg", alt: "Niño mostrando pulgares arriba" },
-  { id: 3, img: "/img/filosofia3.jpg", alt: "Niños haciendo arte con papeles de colores" },
-  { id: 4, img: "/img/filosofia4.jpg", alt: "Niños felices mostrando figuras geométricas" },
-  { id: 5, img: "/img/filosofia5.jpg", alt: "Niños recortando y dibujando en equipo" },
+  { id: 1, img: "/img/filosofia1.webp", alt: "Niños jugando con cocina de juguete" },
+  { id: 2, img: "/img/filosofia2.webp", alt: "Niño mostrando pulgares arriba" },
+  { id: 3, img: "/img/filosofia3.webp", alt: "Niños haciendo arte con papeles de colores" },
+  { id: 4, img: "/img/filosofia4.webp", alt: "Niños felices mostrando figuras geométricas" },
+  { id: 5, img: "/img/filosofia5.webp", alt: "Niños recortando y dibujando en equipo" },
 ]
 
 export function FilosofiaSlider() {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const ref = useRef<number | null>(null)
+  const touchStartX = useRef<number | null>(null)
+  const touchEndX = useRef<number | null>(null)
 
   useEffect(() => {
     if (paused) return
@@ -22,13 +24,38 @@ export function FilosofiaSlider() {
     }
   }, [paused, index])
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX
+    touchEndX.current = null
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return
+    const distance = touchStartX.current - touchEndX.current
+    const minSwipeDistance = 45
+    if (distance > minSwipeDistance) {
+      setIndex((i) => (i + 1) % SLIDES.length)
+    } else if (distance < -minSwipeDistance) {
+      setIndex((i) => (i > 0 ? i - 1 : SLIDES.length - 1))
+    }
+    touchStartX.current = null
+    touchEndX.current = null
+  }
+
   return (
     <div
-      className="relative rounded-[28px] overflow-hidden bg-white p-2 shadow-xl border border-black/5"
+      className="relative rounded-[28px] overflow-hidden bg-white p-2 shadow-xl border border-black/5 touch-pan-y"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       aria-label="Galería Filosofía"
     >
       <div className="relative w-full h-[380px] lg:h-[440px] rounded-[20px] overflow-hidden bg-crema">

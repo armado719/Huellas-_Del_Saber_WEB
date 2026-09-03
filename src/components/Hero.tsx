@@ -2,17 +2,19 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
 const SLIDES = [
-  { id: 1, image: "/img/inicio1.jpg", alt: "Niños con cometas al aire libre con familias" },
-  { id: 2, image: "/img/inicio2.jpg", alt: "Niños con trajes típicos San Pedrito" },
-  { id: 3, image: "/img/inicio3.jpg", alt: "Celebración Feliz Día del Niño con globos" },
-  { id: 4, image: "/img/inicio4.jpg", alt: "Familias bajo árbol compartiendo jornada" },
-  { id: 5, image: "/img/inicio5.jpg", alt: "Niñas danzando folclor con abuelos" },
+  { id: 1, image: "/img/inicio1.webp", alt: "Niños con cometas al aire libre con familias" },
+  { id: 2, image: "/img/inicio2.webp", alt: "Niños con trajes típicos San Pedrito" },
+  { id: 3, image: "/img/inicio3.webp", alt: "Celebración Feliz Día del Niño con globos" },
+  { id: 4, image: "/img/inicio4.webp", alt: "Familias bajo árbol compartiendo jornada" },
+  { id: 5, image: "/img/inicio5.webp", alt: "Niñas danzando folclor con abuelos" },
 ]
 
 export function Hero() {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const timerRef = useRef<number | null>(null)
+  const touchStartX = useRef<number | null>(null)
+  const touchEndX = useRef<number | null>(null)
 
   // autoplay 3s, pause on hover, cleanup
   useEffect(() => {
@@ -25,16 +27,42 @@ export function Hero() {
     }
   }, [paused, index])
 
-  // reduced motion: desactivar autoplay? mantenemos pero sin animación crossfade brusca — ya es fade suave
+  // Soporte de gestos táctiles swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX
+    touchEndX.current = null
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return
+    const distance = touchStartX.current - touchEndX.current
+    const minSwipeDistance = 45
+    if (distance > minSwipeDistance) {
+      // Deslizar izquierda -> siguiente slide
+      setIndex((i) => (i + 1) % SLIDES.length)
+    } else if (distance < -minSwipeDistance) {
+      // Deslizar derecha -> slide anterior
+      setIndex((i) => (i > 0 ? i - 1 : SLIDES.length - 1))
+    }
+    touchStartX.current = null
+    touchEndX.current = null
+  }
 
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden bg-verde-oscuro"
+      className="relative overflow-hidden bg-verde-oscuro touch-pan-y"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       aria-label="Presentación principal"
     >
       {/* slider */}

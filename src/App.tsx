@@ -10,6 +10,8 @@ import { Filosofia } from "./pages/Filosofia"
 import { Admisiones } from "./pages/Admisiones"
 import { Galeria } from "./pages/Galeria"
 import { Contacto } from "./pages/Contacto"
+import { NotFound } from "./pages/NotFound"
+import { FloatingWhatsApp } from "./components/FloatingWhatsApp"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -34,10 +36,11 @@ function Layout() {
           <Route path="/admisiones" element={<Admisiones />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   )
 }

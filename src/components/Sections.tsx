@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { useEffect, useId, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { FilosofiaSlider } from "./FilosofiaSlider"
+import { FormularioAdmisiones } from "./FormularioAdmisiones"
 
 export function Institucional() {
   const [open, setOpen] = useState<number | null>(null)
@@ -12,10 +13,10 @@ export function Institucional() {
     return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = "" }
   }, [open])
   const cards = [
-    { title: "Caminadores con amor", desc: "Primeros pasos con apego seguro, estimulación y juego libre.", icon: "♡", img: "/img/caminadores.jpg", alt: "Niños Caminadores con camisas verdes" },
-    { title: "Juego como lenguaje", desc: "Aprendizaje a través del juego, arte y exploración sensorial.", icon: "◈", img: "/img/Juego_como_lenguaje.jpg", alt: "Niños jugando con sillas de colores" },
-    { title: "Valores en cada día", desc: "Rutinas de respeto, solidaridad y autonomía con familia.", icon: "✦", img: "/img/Valores_en_cada_dia.jpg", alt: "Niños aprendiendo valores con bloques" },
-    { title: "Comunidad pequeña", desc: "Grupos reducidos, atención cercana. 31 publicaciones de vida real.", icon: "⬢", img: "/img/Comunidad_pequena.jpg", alt: "Niños pintando juntos con docente" },
+    { title: "Caminadores con amor", desc: "Primeros pasos con apego seguro, estimulación y juego libre.", icon: "♡", img: "/img/caminadores.webp", alt: "Niños Caminadores con camisas verdes" },
+    { title: "Juego como lenguaje", desc: "Aprendizaje a través del juego, arte y exploración sensorial.", icon: "◈", img: "/img/Juego_como_lenguaje.webp", alt: "Niños jugando con sillas de colores" },
+    { title: "Valores en cada día", desc: "Rutinas de respeto, solidaridad y autonomía con familia.", icon: "✦", img: "/img/Valores_en_cada_dia.webp", alt: "Niños aprendiendo valores con bloques" },
+    { title: "Comunidad pequeña", desc: "Grupos reducidos, atención cercana. 31 publicaciones de vida real.", icon: "⬢", img: "/img/Comunidad_pequena.webp", alt: "Niños pintando juntos con docente" },
   ]
   return (
     <section className="bg-crema py-14 lg:py-20">
@@ -120,7 +121,7 @@ export function Propuesta() {
       title: "Formación integral",
       subtitle: "Desarrollamos mucho más que conocimientos.",
       desc: "Fortalecemos habilidades, valores, autonomía, creatividad y competencias para acompañar el desarrollo integral de cada estudiante.",
-      img: "/img/Formacion_integral.jpg",
+      img: "/img/Formacion_integral.webp",
       alt: "Niños construyendo con bloques de colores",
     },
     {
@@ -129,7 +130,7 @@ export function Propuesta() {
       title: "Acompañamiento afectivo",
       subtitle: "Crecer sintiéndose seguro también es aprender.",
       desc: "Construimos ambientes cálidos y seguros donde cada niño puede desarrollar confianza, autonomía y sentido de pertenencia.",
-      img: "/img/Acompanamiento_afectivo.jpg",
+      img: "/img/Acompanamiento_afectivo.webp",
       alt: "Docente leyendo con niños en rincón de lectura",
     },
     {
@@ -138,7 +139,7 @@ export function Propuesta() {
       title: "Familia y comunidad",
       subtitle: "Educamos de la mano con las familias.",
       desc: "Fortalecemos la comunicación y el vínculo entre familia y colegio para acompañar de manera cercana cada proceso de crecimiento.",
-      img: "/img/Familia_y_comunidad.jpg",
+      img: "/img/Familia_y_comunidad.webp",
       alt: "Niños jugando en túnel con acompañamiento",
     },
     {
@@ -147,7 +148,7 @@ export function Propuesta() {
       title: "Excelencia académica",
       subtitle: "Aprender para comprender, crear y transformar.",
       desc: "Promovemos aprendizajes significativos, curiosidad, pensamiento crítico y herramientas que preparan a nuestros estudiantes para los retos del futuro.",
-      img: "/img/Excelencia_academica.jpg",
+      img: "/img/Excelencia_academica.webp",
       alt: "Niños explorando en piscina de pelotas de colores",
     },
   ]
@@ -184,7 +185,7 @@ export function Propuesta() {
           >
             <div className="relative h-[340px] lg:h-[620px] rounded-[20px] overflow-hidden bg-crema">
               <img
-                src="/img/Propuesta.png"
+                src="/img/Propuesta.webp"
                 alt="Niños en actividad de música y ritmo en el aula"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
@@ -343,42 +344,74 @@ export function Filosofia() {
 
 export function Galeria() {
   const imgs = [
-    "/img/Galeria.jpeg",
-    "/img/Galeria1.jpeg",
-    "/img/Galeria3.jpeg",
-    "/img/Galeria4.jpeg",
-    "/img/Galeria5.jpeg",
-    "/img/Galeria6.jpeg",
-    "/img/Galeria7.jpeg",
-    "/img/Galeria8.jpeg",
-    "/img/Galeria9.jpeg",
-    "/img/Galeria10.jpeg",
-    "/img/Galeria11.jpeg",
-    "/img/Galeria12.jpeg",
-    "/img/Galeria13.jpeg",
-    "/img/Galeria14.jpeg",
-    "/img/Galeria15.jpeg",
-    "/img/Galeria16.jpeg",
-    "/img/Galeria17.jpeg",
-    "/img/Galeria18.jpeg",
-    "/img/Galeria19.jpeg",
-    "/img/Galeria20.jpeg",
-    "/img/Galeria21.jpeg",
-    "/img/Galeria22.jpeg",
-    "/img/Galeria23.jpeg",
-    "/img/Galeria24.jpeg",
-    "/img/Galeria26.jpeg",
-    "/img/Galeria27.jpeg",
+    "/img/Galeria.webp",
+    "/img/Galeria1.webp",
+    "/img/Galeria3.webp",
+    "/img/Galeria4.webp",
+    "/img/Galeria5.webp",
+    "/img/Galeria6.webp",
+    "/img/Galeria7.webp",
+    "/img/Galeria8.webp",
+    "/img/Galeria9.webp",
+    "/img/Galeria10.webp",
+    "/img/Galeria11.webp",
+    "/img/Galeria12.webp",
+    "/img/Galeria13.webp",
+    "/img/Galeria14.webp",
+    "/img/Galeria15.webp",
+    "/img/Galeria16.webp",
+    "/img/Galeria17.webp",
+    "/img/Galeria18.webp",
+    "/img/Galeria19.webp",
+    "/img/Galeria20.webp",
+    "/img/Galeria21.webp",
+    "/img/Galeria22.webp",
+    "/img/Galeria23.webp",
+    "/img/Galeria24.webp",
+    "/img/Galeria26.webp",
+    "/img/Galeria27.webp",
   ]
   const [selected, setSelected] = useState(0)
   const [open, setOpen] = useState(false)
+  const touchStartX = useRef<number | null>(null)
+  const touchEndX = useRef<number | null>(null)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX
+    touchEndX.current = null
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchEndX.current === null) return
+    const distance = touchStartX.current - touchEndX.current
+    const minSwipeDistance = 45
+    if (distance > minSwipeDistance) {
+      setSelected((i) => (i < imgs.length - 1 ? i + 1 : 0))
+    } else if (distance < -minSwipeDistance) {
+      setSelected((i) => (i > 0 ? i - 1 : imgs.length - 1))
+    }
+    touchStartX.current = null
+    touchEndX.current = null
+  }
+
   useEffect(() => {
     if (!open) return
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false) }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false)
+      if (e.key === "ArrowLeft") setSelected((i) => (i > 0 ? i - 1 : imgs.length - 1))
+      if (e.key === "ArrowRight") setSelected((i) => (i < imgs.length - 1 ? i + 1 : 0))
+    }
     document.addEventListener("keydown", onKey)
     document.body.style.overflow = "hidden"
-    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = "" }
-  }, [open])
+    return () => {
+      document.removeEventListener("keydown", onKey)
+      document.body.style.overflow = ""
+    }
+  }, [open, imgs.length])
 
   return (
     <section className="bg-crema-3 py-14 lg:py-20">
@@ -395,7 +428,12 @@ export function Galeria() {
 
         <div className="mt-8 grid lg:grid-cols-[1.7fr_0.9fr] gap-6 items-start">
           <div className="relative rounded-[24px] overflow-hidden bg-white p-2 shadow-lg border border-black/5">
-            <div className="relative aspect-[16/10] rounded-[16px] overflow-hidden bg-crema">
+            <div
+              className="relative aspect-[16/10] rounded-[16px] overflow-hidden bg-crema touch-pan-y"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <AnimatePresence mode="wait">
                 <motion.img
                   key={imgs[selected]}
@@ -457,13 +495,55 @@ export function Galeria() {
               <motion.div
                 role="dialog"
                 aria-modal="true"
-                initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.25 }}
-                className="fixed inset-0 z-50 flex items-center justify-center p-4"
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.25 }}
+                className="fixed inset-0 z-50 flex items-center justify-center p-4 touch-pan-y"
                 onClick={(e) => { if (e.target === e.currentTarget) setOpen(false) }}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
               >
-                <div className="relative max-w-[900px] w-full max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl">
-                  <img src={imgs[selected]} alt={`Galería ${selected + 1} grande`} className="w-full h-auto max-h-[85vh] object-contain bg-crema" />
-                  <button type="button" aria-label="Cerrar" onClick={() => setOpen(false)} className="absolute top-3 right-3 w-8 h-8 grid place-items-center rounded-full bg-white/90 hover:bg-white text-verde shadow-md">✕</button>
+                <div className="relative max-w-[900px] w-full max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+                  <div className="relative flex-1 bg-crema flex items-center justify-center overflow-hidden">
+                    <img src={imgs[selected]} alt={`Galería ${selected + 1} grande`} className="w-full h-auto max-h-[75vh] object-contain" />
+                    <button
+                      type="button"
+                      aria-label="Anterior en visor"
+                      onClick={() => setSelected((i) => (i > 0 ? i - 1 : imgs.length - 1))}
+                      className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 grid place-items-center rounded-full bg-black/60 hover:bg-black/80 text-white shadow-md text-[20px] transition-transform active:scale-95"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="Siguiente en visor"
+                      onClick={() => setSelected((i) => (i < imgs.length - 1 ? i + 1 : 0))}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 grid place-items-center rounded-full bg-black/60 hover:bg-black/80 text-white shadow-md text-[20px] transition-transform active:scale-95"
+                    >
+                      ›
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="Cerrar"
+                      onClick={() => setOpen(false)}
+                      className="absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full bg-black/60 hover:bg-black/80 text-white shadow-md text-[14px]"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <div className="p-3 bg-white w-full flex items-center justify-between text-[13px] border-t border-black/5">
+                    <span className="font-semibold text-verde">Foto {selected + 1} de {imgs.length}</span>
+                    <span className="text-[11px] text-black/50 hidden sm:inline">Usa las teclas ← → o desliza en pantalla</span>
+                    <button
+                      type="button"
+                      onClick={() => setOpen(false)}
+                      className="bg-verde-soft text-verde font-bold px-3 py-1 rounded-full text-[12px] hover:bg-verde hover:text-white transition-colors"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             </>
@@ -521,11 +601,11 @@ export function CTA() {
             className="relative rounded-[28px] overflow-hidden bg-white p-2 shadow-xl border border-black/5"
           >
             <div className="relative h-[320px] lg:h-[460px] rounded-[20px] overflow-hidden bg-crema">
-              <img src="/img/inicio1.jpg" alt="Familias con cometas - comunidad educativa" className="w-full h-full object-cover object-center" loading="lazy" />
+              <img src="/img/inicio1.webp" alt="Familias con cometas - comunidad educativa" className="w-full h-full object-cover object-center" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-verde-oscuro/20 via-transparent to-transparent" aria-hidden />
             </div>
             <div className="absolute -bottom-4 -right-2 lg:-right-4 bg-white rounded-2xl shadow-lg border border-black/5 p-3 flex items-center gap-3 max-w-[220px]">
-              <img src="/img/inicio3.jpg" alt="Niños celebrando" className="w-16 h-16 rounded-xl object-cover shrink-0" loading="lazy" />
+              <img src="/img/inicio3.webp" alt="Niños celebrando" className="w-16 h-16 rounded-xl object-cover shrink-0" loading="lazy" />
               <p className="text-[11px] font-bold leading-tight text-verde-oscuro">Comunidad que acompaña</p>
             </div>
           </motion.div>
@@ -558,38 +638,41 @@ export function CTA() {
           </div>
         </div>
 
-        <div className="mt-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-6 lg:gap-8 items-start">
-          <div className="bg-white rounded-[24px] p-6 lg:p-7 border border-black/5 shadow-sm">
-            <h3 className="font-display font-bold text-[18px] text-verde-oscuro">Documentos para la inscripción</h3>
-            <p className="mt-1 text-[12px] leading-relaxed text-black/50">Estructura preparada — los requisitos definitivos se confirmarán con la institución. Ejemplos orientativos:</p>
-            <ul className="mt-4 grid sm:grid-cols-2 gap-2 text-[13px] text-black/70">
-              {["Registro civil", "Documento de identidad", "Documentación padres/acudientes", "Certificados académicos", "Certificados médicos", "Otros solicitados por la institución"].map((d) => (
-                <li key={d} className="flex items-center gap-2 bg-crema rounded-full px-3 py-2 border border-black/5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-verde shrink-0" aria-hidden /> {d}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-3 text-[11px] text-black/40">* Confirma con admisiones los documentos vigentes.</p>
-          </div>
+        <div className="mt-10 grid lg:grid-cols-[1fr_1.2fr] gap-6 lg:gap-8 items-start">
+          <div className="space-y-6">
+            <div className="bg-white rounded-[24px] p-6 lg:p-7 border border-black/5 shadow-sm">
+              <h3 className="font-display font-bold text-[18px] text-verde-oscuro">Documentos para la inscripción</h3>
+              <p className="mt-1 text-[12px] leading-relaxed text-black/50">Estructura preparada — los requisitos definitivos se confirmarán con la institución. Ejemplos orientativos:</p>
+              <ul className="mt-4 grid sm:grid-cols-2 gap-2 text-[13px] text-black/70">
+                {["Registro civil", "Documento de identidad", "Documentación padres/acudientes", "Certificados académicos", "Certificados médicos", "Otros solicitados por la institución"].map((d) => (
+                  <li key={d} className="flex items-center gap-2 bg-crema rounded-full px-3 py-2 border border-black/5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-verde shrink-0" aria-hidden /> {d}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 text-[11px] text-black/40">* Confirma con admisiones los documentos vigentes.</p>
+            </div>
 
-          <div className="bg-verde rounded-[24px] p-6 lg:p-8 text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-verde-claro/20 to-transparent" aria-hidden />
-            <div className="relative">
-              <h3 className="font-display font-bold text-[20px]">Iniciar inscripción</h3>
-              <p className="mt-1 text-[13px] text-white/80">Da el primer paso con un mensaje directo a nuestro equipo.</p>
-              <a href="https://wa.me/573167927255?text=Hola%20Huellas%20del%20Saber%20quiero%20iniciar%20inscripci%C3%B3n" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex w-full justify-center items-center gap-2 bg-dorado hover:bg-dorado-hover text-verde-oscuro font-bold text-[14px] px-6 py-3.5 rounded-full transition-colors">
-                Iniciar inscripción <span aria-hidden>→</span>
-              </a>
-              <div className="mt-6 pt-5 border-t border-white/15">
-                <h4 className="font-bold text-[13px]">¿Tienes alguna pregunta?</h4>
-                <p className="text-[12.5px] text-white/70 mt-1">Nuestro equipo está dispuesto a orientarte y acompañarte durante todo el proceso.</p>
-                <div className="mt-3 flex flex-col gap-2 text-[13px]">
-                  <a href="https://wa.me/573167927255" target="_blank" rel="noopener noreferrer" className="font-semibold text-dorado-claro hover:text-white">WhatsApp 316 792 7255</a>
-                  <a href="https://maps.app.goo.gl/bGRuR2Fu57BDgoj48" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">Calle 24a #34 bis-35, Neiva</a>
-                  <span className="text-white/60 text-[12px]">7:00 A.M a 05:30 P.M · Lun-Vie</span>
+            <div className="bg-verde rounded-[24px] p-6 text-white relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-verde-claro/20 to-transparent" aria-hidden />
+              <div className="relative">
+                <h4 className="font-display font-bold text-[18px]">Atención Personalizada</h4>
+                <p className="text-[12.5px] text-white/80 mt-1">Nuestro equipo directivo y docente está listo para resolver tus inquietudes y agendar tu visita al colegio.</p>
+                <div className="mt-4 flex flex-col gap-2.5 text-[13px]">
+                  <a href="https://wa.me/573167927255" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-dorado-claro hover:text-white">
+                    <span className="w-2 h-2 rounded-full bg-[#25D366]" /> WhatsApp: 316 792 7255
+                  </a>
+                  <a href="https://maps.app.goo.gl/bGRuR2Fu57BDgoj48" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">
+                    📍 Calle 24a #34 bis-35, Neiva, Huila
+                  </a>
+                  <span className="text-white/60 text-[12px]">⏰ 7:00 A.M a 05:30 P.M · Lunes a Viernes</span>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div>
+            <FormularioAdmisiones />
           </div>
         </div>
       </div>

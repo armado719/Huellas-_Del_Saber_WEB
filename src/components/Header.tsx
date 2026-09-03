@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { NavLink, Link } from "react-router-dom"
 import { Escudo } from "./Escudo"
+import { TopBanner } from "./TopBanner"
 
 const NAV = [
   { label: "Inicio", to: "/" },
@@ -17,6 +18,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-verde border-b border-white/10">
+      <TopBanner />
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-[76px] lg:min-h-[96px] items-center justify-between gap-4 py-2">
           <Link to="/" className="flex flex-col items-center text-center gap-2 group min-w-[200px] lg:min-w-[260px] py-1.5">

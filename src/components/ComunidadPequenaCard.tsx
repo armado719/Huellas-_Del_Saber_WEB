@@ -21,7 +21,7 @@ export function ComunidadPequenaCard() {
         className="bg-white rounded-[20px] overflow-hidden border border-black/5 shadow-sm hover:shadow-md transition-shadow flex flex-col cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde"
       >
         <div className="aspect-[16/10] overflow-hidden bg-crema">
-          <img src="/img/Comunidad_pequena.jpg" alt="Niños pintando juntos con docente" className="w-full h-full object-cover object-center" loading="lazy" />
+          <img src="/img/Comunidad_pequena.webp" alt="Niños pintando juntos con docente" className="w-full h-full object-cover object-center" loading="lazy" />
         </div>
         <div className="p-6">
           <div className="w-9 h-9 rounded-full bg-verde-soft grid place-items-center text-verde font-bold text-[14px]">⬢</div>
@@ -44,7 +44,7 @@ export function ComunidadPequenaCard() {
             >
               <div className="bg-crema rounded-[28px] shadow-2xl border border-white max-w-[520px] w-full max-h-[90vh] overflow-hidden flex flex-col">
                 <div className="aspect-[16/10] overflow-hidden shrink-0 relative bg-crema">
-                  <img src="/img/Comunidad_pequena.jpg" alt="Niños pintando juntos" className="w-full h-full object-cover object-center" />
+                  <img src="/img/Comunidad_pequena.webp" alt="Niños pintando juntos" className="w-full h-full object-cover object-center" />
                   <button type="button" aria-label="Cerrar" onClick={() => setOpen(false)} className="absolute top-3 right-3 w-8 h-8 grid place-items-center rounded-full bg-white/90 hover:bg-white text-verde shadow-md border border-black/5">✕</button>
                 </div>
                 <div className="p-6 overflow-y-auto">
