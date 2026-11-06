@@ -10,6 +10,8 @@ import { Filosofia } from "./pages/Filosofia"
 import { Admisiones } from "./pages/Admisiones"
 import { Galeria } from "./pages/Galeria"
 import { Contacto } from "./pages/Contacto"
+import { Privacidad } from "./pages/Privacidad"
+import { Terminos } from "./pages/Terminos"
 import { NotFound } from "./pages/NotFound"
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp"
 
@@ -36,6 +38,8 @@ function Layout() {
           <Route path="/admisiones" element={<Admisiones />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/privacidad" element={<Privacidad />} />
+          <Route path="/terminos" element={<Terminos />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
