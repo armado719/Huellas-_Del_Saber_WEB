@@ -76,9 +76,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-3 justify-between text-[12px] text-white/55">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-4 sm:gap-3 items-center sm:items-start justify-between text-[12px] text-white/55 text-center sm:text-left">
           <p>© 2019 Gimnasio Pedagógico Huellas del Saber · Neiva, Huila</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             <Link to="/privacidad" className="hover:text-white">Política de Privacidad</Link>
             <Link to="/terminos" className="hover:text-white">Condiciones del Servicio</Link>
           </div>

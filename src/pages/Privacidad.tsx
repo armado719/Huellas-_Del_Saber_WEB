@@ -1,21 +1,21 @@
 export function Privacidad() {
   return (
-    <section className="bg-crema py-14 lg:py-20">
+    <section className="bg-crema py-10 sm:py-14 lg:py-20">
       <div className="mx-auto max-w-[840px] px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-[640px] mx-auto mb-10">
           <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-dorado">Legal</p>
-          <h1 className="font-display font-bold text-[30px] lg:text-[40px] text-verde-oscuro mt-1">Política de Privacidad</h1>
+          <h1 className="font-display font-bold text-[24px] sm:text-[30px] lg:text-[40px] text-verde-oscuro mt-1">Política de Privacidad</h1>
           <p className="text-[13px] text-black/50 mt-2">Última actualización: noviembre de 2026</p>
         </div>
 
-        <div className="bg-white rounded-[24px] p-6 sm:p-10 border border-black/5 shadow-sm space-y-6 text-[15px] leading-relaxed text-black/75">
+        <div className="bg-white rounded-[24px] p-5 sm:p-8 lg:p-10 border border-black/5 shadow-sm space-y-5 sm:space-y-6 text-[14px] sm:text-[15px] leading-relaxed text-black/75">
           <p>
             El Gimnasio Pedagógico Huellas del Saber ("nosotros") respeta la privacidad de las personas que visitan
             este sitio web y de quienes interactúan con nuestras páginas oficiales de Facebook e Instagram.
           </p>
 
           <div>
-            <h2 className="font-display font-bold text-[18px] text-verde-oscuro mb-2">¿Qué información usamos?</h2>
+            <h2 className="font-display font-bold text-[16px] sm:text-[18px] text-verde-oscuro mb-2">¿Qué información usamos?</h2>
             <p>
               Utilizamos herramientas de automatización (como n8n) conectadas a las páginas oficiales de Facebook
               ("Gimnasio Pedagógico Huellas del Saber") e Instagram (@huellasdelsabergp) únicamente para publicar
@@ -25,7 +25,7 @@ export function Privacidad() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-[18px] text-verde-oscuro mb-2">Formulario de contacto/admisiones</h2>
+            <h2 className="font-display font-bold text-[16px] sm:text-[18px] text-verde-oscuro mb-2">Formulario de contacto/admisiones</h2>
             <p>
               Si nos escribe a través del formulario de este sitio o por WhatsApp, los datos que nos proporcione
               (nombre, teléfono, correo) se usan exclusivamente para responder su solicitud de información o
@@ -34,7 +34,7 @@ export function Privacidad() {
           </div>
 
           <div id="eliminacion-datos">
-            <h2 className="font-display font-bold text-[18px] text-verde-oscuro mb-2">Eliminación de datos</h2>
+            <h2 className="font-display font-bold text-[16px] sm:text-[18px] text-verde-oscuro mb-2">Eliminación de datos</h2>
             <p>
               Si desea que eliminemos cualquier dato que nos haya proporcionado, puede solicitarlo en cualquier
               momento escribiéndonos a{" "}
@@ -50,7 +50,7 @@ export function Privacidad() {
           </div>
 
           <div>
-            <h2 className="font-display font-bold text-[18px] text-verde-oscuro mb-2">Contacto</h2>
+            <h2 className="font-display font-bold text-[16px] sm:text-[18px] text-verde-oscuro mb-2">Contacto</h2>
             <p>
               Si tiene alguna pregunta sobre esta política de privacidad, puede contactarnos por WhatsApp al{" "}
               <a href="https://wa.me/573167927255" target="_blank" rel="noopener noreferrer" className="text-verde font-semibold hover:underline">
