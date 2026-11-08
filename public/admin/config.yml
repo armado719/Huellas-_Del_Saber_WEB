@@ -2,7 +2,7 @@ backend:
   name: github
   repo: armado719/Huellas-_Del_Saber_WEB
   branch: main
-  base_url: https://huellasdelsaber.edu.co
+  base_url: https://huellas-del-saber-web.vercel.app
   auth_endpoint: api/begin
 
 local_backend: true
@@ -10,8 +10,8 @@ local_backend: true
 media_folder: "public/img"
 public_folder: "/img"
 
-site_url: https://huellasdelsaber.edu.co
-display_url: https://huellasdelsaber.edu.co
+site_url: https://huellas-del-saber-web.vercel.app
+display_url: https://huellas-del-saber-web.vercel.app
 
 collections:
   - name: niveles
