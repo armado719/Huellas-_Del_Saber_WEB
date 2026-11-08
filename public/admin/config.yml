@@ -21,14 +21,18 @@ collections:
       - name: niveles
         file: content/niveles.json
         fields:
-          - { label: Edad, name: edad, widget: string }
-          - { label: Nivel, name: nivel, widget: string }
-          - { label: Imagen, name: img, widget: image }
-          - { label: Alt, name: alt, widget: string }
-          - { label: Frase, name: frase, widget: string }
-          - { label: Bullets, name: bullets, widget: list }
-          - { label: Que trabajamos, name: queTrabajamos, widget: list }
-          - { label: Descripción, name: descripcion, widget: text }
+          - label: Niveles
+            name: items
+            widget: list
+            fields:
+              - { label: Edad, name: edad, widget: string }
+              - { label: Nivel, name: nivel, widget: string }
+              - { label: Imagen, name: img, widget: image }
+              - { label: Alt, name: alt, widget: string }
+              - { label: Frase, name: frase, widget: string }
+              - { label: Bullets, name: bullets, widget: list }
+              - { label: Que trabajamos, name: queTrabajamos, widget: list }
+              - { label: Descripción, name: descripcion, widget: text }
 
   - name: faq
     label: FAQ
@@ -37,10 +41,14 @@ collections:
       - name: faq
         file: content/faq.json
         fields:
-          - { label: Id, name: id, widget: string }
-          - { label: Pregunta, name: pregunta, widget: string }
-          - { label: Respuesta, name: respuesta, widget: text }
-          - { label: Categoria, name: categoria, widget: string }
+          - label: Preguntas
+            name: items
+            widget: list
+            fields:
+              - { label: Id, name: id, widget: string }
+              - { label: Pregunta, name: pregunta, widget: string }
+              - { label: Respuesta, name: respuesta, widget: text }
+              - { label: Categoria, name: categoria, widget: string }
 
   - name: cards
     label: Tarjetas institucionales
@@ -49,11 +57,15 @@ collections:
       - name: cards
         file: content/cards.json
         fields:
-          - { label: Título, name: title, widget: string }
-          - { label: Descripción, name: desc, widget: string }
-          - { label: Icono, name: icon, widget: string }
-          - { label: Imagen, name: img, widget: image }
-          - { label: Alt, name: alt, widget: string }
+          - label: Tarjetas
+            name: items
+            widget: list
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: desc, widget: string }
+              - { label: Icono, name: icon, widget: string }
+              - { label: Imagen, name: img, widget: image }
+              - { label: Alt, name: alt, widget: string }
 
   - name: pilares
     label: Pilares de la propuesta
@@ -62,13 +74,17 @@ collections:
       - name: pilares
         file: content/pilares.json
         fields:
-          - { label: Número, name: num, widget: string }
-          - { label: Icono, name: icon, widget: string }
-          - { label: Título, name: title, widget: string }
-          - { label: Subtítulo, name: subtitle, widget: string }
-          - { label: Descripción, name: desc, widget: text }
-          - { label: Imagen, name: img, widget: image }
-          - { label: Alt, name: alt, widget: string }
+          - label: Pilares
+            name: items
+            widget: list
+            fields:
+              - { label: Número, name: num, widget: string }
+              - { label: Icono, name: icon, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Subtítulo, name: subtitle, widget: string }
+              - { label: Descripción, name: desc, widget: text }
+              - { label: Imagen, name: img, widget: image }
+              - { label: Alt, name: alt, widget: string }
 
   - name: galeria
     label: Galería
@@ -86,7 +102,11 @@ collections:
       - name: pasos
         file: content/pasos.json
         fields:
-          - { label: Número, name: num, widget: string }
-          - { label: Título, name: title, widget: string }
-          - { label: Descripción, name: desc, widget: text }
-          - { label: Icono, name: icon, widget: string }
+          - label: Pasos
+            name: items
+            widget: list
+            fields:
+              - { label: Número, name: num, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: desc, widget: text }
+              - { label: Icono, name: icon, widget: string }
