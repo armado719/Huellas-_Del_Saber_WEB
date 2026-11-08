@@ -1,5 +1,5 @@
 import { NivelCard } from "../components/NivelCard"
-import niveles from "../../content/niveles.json"
+import { items as niveles } from "../../content/niveles.json"
 
 export function Niveles() {
   return (

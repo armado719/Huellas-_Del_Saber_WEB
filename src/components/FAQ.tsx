@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import faqs from "../../content/faq.json"
+import { items as faqs } from "../../content/faq.json"
 
 interface FAQItem {
   id: string

@@ -16,9 +16,9 @@ display_url: https://huellasdelsaber.edu.co
 collections:
   - name: niveles
     label: Niveles educativos
-    format: flat-json
     files:
       - name: niveles
+        label: Niveles educativos
         file: content/niveles.json
         fields:
           - label: Niveles
@@ -36,9 +36,9 @@ collections:
 
   - name: faq
     label: FAQ
-    format: flat-json
     files:
       - name: faq
+        label: FAQ
         file: content/faq.json
         fields:
           - label: Preguntas
@@ -52,9 +52,9 @@ collections:
 
   - name: cards
     label: Tarjetas institucionales
-    format: flat-json
     files:
       - name: cards
+        label: Tarjetas institucionales
         file: content/cards.json
         fields:
           - label: Tarjetas
@@ -69,9 +69,9 @@ collections:
 
   - name: pilares
     label: Pilares de la propuesta
-    format: flat-json
     files:
       - name: pilares
+        label: Pilares de la propuesta
         file: content/pilares.json
         fields:
           - label: Pilares
@@ -88,18 +88,18 @@ collections:
 
   - name: galeria
     label: Galería
-    format: flat-json
     files:
       - name: galeria
+        label: Galería
         file: content/galeria.json
         fields:
           - { label: Imágenes, name: items, widget: list }
 
   - name: pasos
     label: Proceso de admisión
-    format: flat-json
     files:
       - name: pasos
+        label: Proceso de admisión
         file: content/pasos.json
         fields:
           - label: Pasos

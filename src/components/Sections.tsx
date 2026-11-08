@@ -2,10 +2,10 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useId, useRef, useState } from "react"
 import { FilosofiaSlider } from "./FilosofiaSlider"
 import { FormularioAdmisiones } from "./FormularioAdmisiones"
-import cards from "../../content/cards.json"
-import pilares from "../../content/pilares.json"
-import imgs from "../../content/galeria.json"
-import pasos from "../../content/pasos.json"
+import { items as cards } from "../../content/cards.json"
+import { items as pilares } from "../../content/pilares.json"
+import { items as imgs } from "../../content/galeria.json"
+import { items as pasos } from "../../content/pasos.json"
 
 export function Institucional() {
   const [open, setOpen] = useState<number | null>(null)

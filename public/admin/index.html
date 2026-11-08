@@ -10,15 +10,6 @@
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
-      CMS.registerCustomFormat("flat-json", "json", {
-        fromFile: function (text) {
-          return { items: JSON.parse(text) };
-        },
-        toFile: function (value) {
-          return JSON.stringify(value && value.items ? value.items : value, null, 2);
-        },
-      });
-
       CMS.init();
     </script>
   </body>

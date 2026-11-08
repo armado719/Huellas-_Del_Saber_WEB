@@ -1,26 +1,28 @@
-[
-  {
-    "num": "01",
-    "title": "Conoce nuestra propuesta",
-    "desc": "Descubre nuestro proyecto educativo, niveles, filosofía y propuesta de formación.",
-    "icon": "◈"
-  },
-  {
-    "num": "02",
-    "title": "Agenda tu visita",
-    "desc": "Conoce nuestras instalaciones y conversa con nuestro equipo para resolver tus inquietudes.",
-    "icon": "♡"
-  },
-  {
-    "num": "03",
-    "title": "Inicia tu proceso",
-    "desc": "Recibe orientación sobre requisitos, documentación y disponibilidad del nivel correspondiente.",
-    "icon": "✦"
-  },
-  {
-    "num": "04",
-    "title": "Forma parte de nuestra familia",
-    "desc": "Completa el proceso de inscripción y comienza una nueva etapa junto a nosotros.",
-    "icon": "⬢"
-  }
-]
+{
+  "items": [
+    {
+      "num": "01",
+      "title": "Conoce nuestra propuesta",
+      "desc": "Descubre nuestro proyecto educativo, niveles, filosofía y propuesta de formación.",
+      "icon": "◈"
+    },
+    {
+      "num": "02",
+      "title": "Agenda tu visita",
+      "desc": "Conoce nuestras instalaciones y conversa con nuestro equipo para resolver tus inquietudes.",
+      "icon": "♡"
+    },
+    {
+      "num": "03",
+      "title": "Inicia tu proceso",
+      "desc": "Recibe orientación sobre requisitos, documentación y disponibilidad del nivel correspondiente.",
+      "icon": "✦"
+    },
+    {
+      "num": "04",
+      "title": "Forma parte de nuestra familia",
+      "desc": "Completa el proceso de inscripción y comienza una nueva etapa junto a nosotros.",
+      "icon": "⬢"
+    }
+  ]
+}
