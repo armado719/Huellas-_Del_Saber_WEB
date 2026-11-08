@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: armado719/Huellas-_Del_Saber_WEB-
+  repo: armado719/Huellas-_Del_Saber_WEB
   branch: main
   base_url: https://huellasdelsaber.edu.co
   auth_endpoint: api/begin
