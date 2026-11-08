@@ -2,6 +2,10 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useId, useRef, useState } from "react"
 import { FilosofiaSlider } from "./FilosofiaSlider"
 import { FormularioAdmisiones } from "./FormularioAdmisiones"
+import cards from "../../content/cards.json"
+import pilares from "../../content/pilares.json"
+import imgs from "../../content/galeria.json"
+import pasos from "../../content/pasos.json"
 
 export function Institucional() {
   const [open, setOpen] = useState<number | null>(null)
@@ -12,12 +16,6 @@ export function Institucional() {
     document.body.style.overflow = "hidden"
     return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = "" }
   }, [open])
-  const cards = [
-    { title: "Caminadores con amor", desc: "Primeros pasos con apego seguro, estimulación y juego libre.", icon: "♡", img: "/img/caminadores.webp", alt: "Niños Caminadores con camisas verdes" },
-    { title: "Juego como lenguaje", desc: "Aprendizaje a través del juego, arte y exploración sensorial.", icon: "◈", img: "/img/Juego_como_lenguaje.webp", alt: "Niños jugando con sillas de colores" },
-    { title: "Valores en cada día", desc: "Rutinas de respeto, solidaridad y autonomía con familia.", icon: "✦", img: "/img/Valores_en_cada_dia.webp", alt: "Niños aprendiendo valores con bloques" },
-    { title: "Comunidad pequeña", desc: "Grupos reducidos, atención cercana. 31 publicaciones de vida real.", icon: "⬢", img: "/img/Comunidad_pequena.webp", alt: "Niños pintando juntos con docente" },
-  ]
   return (
     <section className="bg-crema py-14 lg:py-20">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
@@ -114,45 +112,6 @@ export function Propuesta() {
       document.body.style.overflow = ""
     }
   }, [open])
-  const pilares = [
-    {
-      num: "01",
-      icon: "◈",
-      title: "Formación integral",
-      subtitle: "Desarrollamos mucho más que conocimientos.",
-      desc: "Fortalecemos habilidades, valores, autonomía, creatividad y competencias para acompañar el desarrollo integral de cada estudiante.",
-      img: "/img/Formacion_integral.webp",
-      alt: "Niños construyendo con bloques de colores",
-    },
-    {
-      num: "02",
-      icon: "♡",
-      title: "Acompañamiento afectivo",
-      subtitle: "Crecer sintiéndose seguro también es aprender.",
-      desc: "Construimos ambientes cálidos y seguros donde cada niño puede desarrollar confianza, autonomía y sentido de pertenencia.",
-      img: "/img/Acompanamiento_afectivo.webp",
-      alt: "Docente leyendo con niños en rincón de lectura",
-    },
-    {
-      num: "03",
-      icon: "✦",
-      title: "Familia y comunidad",
-      subtitle: "Educamos de la mano con las familias.",
-      desc: "Fortalecemos la comunicación y el vínculo entre familia y colegio para acompañar de manera cercana cada proceso de crecimiento.",
-      img: "/img/Familia_y_comunidad.webp",
-      alt: "Niños jugando en túnel con acompañamiento",
-    },
-    {
-      num: "04",
-      icon: "⬢",
-      title: "Excelencia académica",
-      subtitle: "Aprender para comprender, crear y transformar.",
-      desc: "Promovemos aprendizajes significativos, curiosidad, pensamiento crítico y herramientas que preparan a nuestros estudiantes para los retos del futuro.",
-      img: "/img/Excelencia_academica.webp",
-      alt: "Niños explorando en piscina de pelotas de colores",
-    },
-  ]
-
   return (
     <section id="propuesta" className="bg-white py-14 lg:py-20 border-y border-black/5 overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
@@ -343,34 +302,6 @@ export function Filosofia() {
 }
 
 export function Galeria() {
-  const imgs = [
-    "/img/Galeria.webp",
-    "/img/Galeria1.webp",
-    "/img/Galeria3.webp",
-    "/img/Galeria4.webp",
-    "/img/Galeria5.webp",
-    "/img/Galeria6.webp",
-    "/img/Galeria7.webp",
-    "/img/Galeria8.webp",
-    "/img/Galeria9.webp",
-    "/img/Galeria10.webp",
-    "/img/Galeria11.webp",
-    "/img/Galeria12.webp",
-    "/img/Galeria13.webp",
-    "/img/Galeria14.webp",
-    "/img/Galeria15.webp",
-    "/img/Galeria16.webp",
-    "/img/Galeria17.webp",
-    "/img/Galeria18.webp",
-    "/img/Galeria19.webp",
-    "/img/Galeria20.webp",
-    "/img/Galeria21.webp",
-    "/img/Galeria22.webp",
-    "/img/Galeria23.webp",
-    "/img/Galeria24.webp",
-    "/img/Galeria26.webp",
-    "/img/Galeria27.webp",
-  ]
   const [selected, setSelected] = useState(0)
   const [open, setOpen] = useState(false)
   const touchStartX = useRef<number | null>(null)
@@ -411,7 +342,7 @@ export function Galeria() {
       document.removeEventListener("keydown", onKey)
       document.body.style.overflow = ""
     }
-  }, [open, imgs.length])
+  }, [open])
 
   return (
     <section className="bg-crema-3 py-14 lg:py-20">
@@ -555,13 +486,6 @@ export function Galeria() {
 }
 
 export function CTA() {
-  const pasos = [
-    { num: "01", title: "Conoce nuestra propuesta", desc: "Descubre nuestro proyecto educativo, niveles, filosofía y propuesta de formación.", icon: "◈" },
-    { num: "02", title: "Agenda tu visita", desc: "Conoce nuestras instalaciones y conversa con nuestro equipo para resolver tus inquietudes.", icon: "♡" },
-    { num: "03", title: "Inicia tu proceso", desc: "Recibe orientación sobre requisitos, documentación y disponibilidad del nivel correspondiente.", icon: "✦" },
-    { num: "04", title: "Forma parte de nuestra familia", desc: "Completa el proceso de inscripción y comienza una nueva etapa junto a nosotros.", icon: "⬢" },
-  ]
-
   return (
     <section id="admisiones" className="bg-crema py-14 lg:py-20">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">

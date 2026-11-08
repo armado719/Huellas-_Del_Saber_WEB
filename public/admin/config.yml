@@ -1,0 +1,92 @@
+backend:
+  name: github
+  repo: armado719/Huellas-_Del_Saber_WEB-
+  branch: main
+  base_url: https://huellasdelsaber.edu.co
+  auth_endpoint: api/begin
+
+local_backend: true
+
+media_folder: "public/img"
+public_folder: "/img"
+
+site_url: https://huellasdelsaber.edu.co
+display_url: https://huellasdelsaber.edu.co
+
+collections:
+  - name: niveles
+    label: Niveles educativos
+    format: flat-json
+    files:
+      - name: niveles
+        file: content/niveles.json
+        fields:
+          - { label: Edad, name: edad, widget: string }
+          - { label: Nivel, name: nivel, widget: string }
+          - { label: Imagen, name: img, widget: image }
+          - { label: Alt, name: alt, widget: string }
+          - { label: Frase, name: frase, widget: string }
+          - { label: Bullets, name: bullets, widget: list }
+          - { label: Que trabajamos, name: queTrabajamos, widget: list }
+          - { label: Descripción, name: descripcion, widget: text }
+
+  - name: faq
+    label: FAQ
+    format: flat-json
+    files:
+      - name: faq
+        file: content/faq.json
+        fields:
+          - { label: Id, name: id, widget: string }
+          - { label: Pregunta, name: pregunta, widget: string }
+          - { label: Respuesta, name: respuesta, widget: text }
+          - { label: Categoria, name: categoria, widget: string }
+
+  - name: cards
+    label: Tarjetas institucionales
+    format: flat-json
+    files:
+      - name: cards
+        file: content/cards.json
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Descripción, name: desc, widget: string }
+          - { label: Icono, name: icon, widget: string }
+          - { label: Imagen, name: img, widget: image }
+          - { label: Alt, name: alt, widget: string }
+
+  - name: pilares
+    label: Pilares de la propuesta
+    format: flat-json
+    files:
+      - name: pilares
+        file: content/pilares.json
+        fields:
+          - { label: Número, name: num, widget: string }
+          - { label: Icono, name: icon, widget: string }
+          - { label: Título, name: title, widget: string }
+          - { label: Subtítulo, name: subtitle, widget: string }
+          - { label: Descripción, name: desc, widget: text }
+          - { label: Imagen, name: img, widget: image }
+          - { label: Alt, name: alt, widget: string }
+
+  - name: galeria
+    label: Galería
+    format: flat-json
+    files:
+      - name: galeria
+        file: content/galeria.json
+        fields:
+          - { label: Imágenes, name: items, widget: list }
+
+  - name: pasos
+    label: Proceso de admisión
+    format: flat-json
+    files:
+      - name: pasos
+        file: content/pasos.json
+        fields:
+          - { label: Número, name: num, widget: string }
+          - { label: Título, name: title, widget: string }
+          - { label: Descripción, name: desc, widget: text }
+          - { label: Icono, name: icon, widget: string }

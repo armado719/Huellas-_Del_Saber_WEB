@@ -1,0 +1,38 @@
+[
+  {
+    "id": "faq-edades",
+    "pregunta": "¿Qué edades comprende cada nivel educativo en Huellas del Saber?",
+    "respuesta": "Acompañamos la primera infancia en 4 niveles formativos: Caminadores (1 a 2 años), Párvulos (2 a 3 años), Pre-Jardín (3 a 4 años) y Jardín (4 a 5 años). Cada nivel cuenta con espacios y metodologías adaptadas a su etapa de maduración.",
+    "categoria": "Niveles"
+  },
+  {
+    "id": "faq-horario",
+    "pregunta": "¿Cuál es el horario de la jornada escolar y de atención a padres?",
+    "respuesta": "Nuestro horario de atención y actividades institucionales es de 7:00 A.M. a 05:30 P.M., de lunes a viernes en nuestra sede de la Calle 24a #34 bis-35, Neiva, Huila. Ofrecemos flexibilidad para acompañar las rutinas familiares.",
+    "categoria": "Horarios"
+  },
+  {
+    "id": "faq-adaptacion",
+    "pregunta": "¿Cómo es el proceso de adaptación para los niños que ingresan por primera vez?",
+    "respuesta": "Realizamos un periodo de adaptación progresivo y respetuoso del ritmo emocional de cada niño. Nuestro equipo pedagógico trabaja de la mano con los padres mediante apego seguro, juego libre y rutinas de bienvenida para que la transición sea afectiva, segura y feliz.",
+    "categoria": "Acompañamiento"
+  },
+  {
+    "id": "faq-metodologia",
+    "pregunta": "¿Cuál es el enfoque pedagógico, de valores y bilingüismo?",
+    "respuesta": "Nuestro modelo pedagógico sitúa al niño en el centro a través de las 4 actividades rectoras de la infancia: el juego, el arte, la literatura y la exploración del medio. Integramos inglés lúdico en las experiencias cotidianas y formamos en valores de empatía, respeto y autonomía.",
+    "categoria": "Pedagogía"
+  },
+  {
+    "id": "faq-requisitos",
+    "pregunta": "¿Qué documentos se requieren para formalizar la matrícula?",
+    "respuesta": "La documentación habitual incluye: fotocopia del registro civil de nacimiento, copia de cédula de los padres o acudientes, copia del carné de vacunación al día, certificado médico general y fotos recientes tamaño documento. Nuestro equipo te orienta de forma sencilla en cada paso.",
+    "categoria": "Admisiones"
+  },
+  {
+    "id": "faq-cupos",
+    "pregunta": "¿Por qué trabajamos con grupos reducidos y cómo separar el cupo?",
+    "respuesta": "Creemos en una comunidad pequeña donde cada niño recibe atención verdaderamente individualizada. Al tener cupos limitados por aula, recomendamos reservar con anticipación a través de nuestro formulario en línea o chateando directamente a nuestra línea de WhatsApp.",
+    "categoria": "Cupos"
+  }
+]

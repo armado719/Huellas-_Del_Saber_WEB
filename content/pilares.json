@@ -1,0 +1,38 @@
+[
+  {
+    "num": "01",
+    "icon": "◈",
+    "title": "Formación integral",
+    "subtitle": "Desarrollamos mucho más que conocimientos.",
+    "desc": "Fortalecemos habilidades, valores, autonomía, creatividad y competencias para acompañar el desarrollo integral de cada estudiante.",
+    "img": "/img/Formacion_integral.webp",
+    "alt": "Niños construyendo con bloques de colores"
+  },
+  {
+    "num": "02",
+    "icon": "♡",
+    "title": "Acompañamiento afectivo",
+    "subtitle": "Crecer sintiéndose seguro también es aprender.",
+    "desc": "Construimos ambientes cálidos y seguros donde cada niño puede desarrollar confianza, autonomía y sentido de pertenencia.",
+    "img": "/img/Acompanamiento_afectivo.webp",
+    "alt": "Docente leyendo con niños en rincón de lectura"
+  },
+  {
+    "num": "03",
+    "icon": "✦",
+    "title": "Familia y comunidad",
+    "subtitle": "Educamos de la mano con las familias.",
+    "desc": "Fortalecemos la comunicación y el vínculo entre familia y colegio para acompañar de manera cercana cada proceso de crecimiento.",
+    "img": "/img/Familia_y_comunidad.webp",
+    "alt": "Niños jugando en túnel con acompañamiento"
+  },
+  {
+    "num": "04",
+    "icon": "⬢",
+    "title": "Excelencia académica",
+    "subtitle": "Aprender para comprender, crear y transformar.",
+    "desc": "Promovemos aprendizajes significativos, curiosidad, pensamiento crítico y herramientas que preparan a nuestros estudiantes para los retos del futuro.",
+    "img": "/img/Excelencia_academica.webp",
+    "alt": "Niños explorando en piscina de pelotas de colores"
+  }
+]
